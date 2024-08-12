@@ -39,8 +39,8 @@ const Item = ({ item, width }) => {
           alt={item.name}
           width="280px"
           height="400px"
-          // src={`https://unique-wears-server-v1.vercel.app/${url}`}
-          src={`http://localhost:1337${url}`}
+          src={`https://unique-wears-server.vercel.app/${url}`}
+          // src={`http://localhost:1337${url}`}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{ cursor: "pointer" }}
         />
