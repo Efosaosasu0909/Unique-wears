@@ -63,7 +63,7 @@ const MainCarousel = () => {
             style={{
               // maxWidth: "100%",
               width: "100%",
-              height: "700px",
+              height: "500px",
               objectFit: "cover",
               backgroundAttachment: "fixed",
             }}

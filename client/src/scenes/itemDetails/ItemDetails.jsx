@@ -26,8 +26,8 @@ const ItemDetails = () => {
 
   async function getItem() {
     const item = await fetch(
-      `https://unique-wears-server.vercel.app/api/items/${itemId}?populate=image`,
-      // `http://localhost:1337/api/items/${itemId}?populate=image`,
+      // `https://unique-wears-server.vercel.app/api/items/${itemId}?populate=image`,
+      `http://localhost:1337/api/items/${itemId}?populate=image`,
       { method: "GET" }
     );
 
@@ -40,8 +40,8 @@ const ItemDetails = () => {
 
   async function getItems() {
     const items = await fetch(
-      "https://unique-wears-server.vercel.app/api/items?populate=image",
-      // "http://localhost:1337/api/items?populate=image",
+      // "https://unique-wears-server.vercel.app/api/items?populate=image",
+      "http://localhost:1337/api/items?populate=image",
       { method: "GET" }
     );
     const itemsJson = await items.json();
@@ -61,8 +61,8 @@ const ItemDetails = () => {
             alt={item?.name}
             width="100%"
             height="100%"
-            src={`https://unique-wears-server.vercel.app/${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
-            // src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+            // src={`https://unique-wears-server.vercel.app/${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+            src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
             style={{ objectFit: "contain" }}
           />
         </Box>
